@@ -1,0 +1,138 @@
+:root {
+    --colorText: white;
+    --bgcolor: white;
+    --bgDiv: rgba(0,0,0, .5)
+}
+
+body {
+    background-image: url(img/night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colorText);
+    transition: all 2s ease-out;
+}
+.light-body {
+    background-image: url(img/moning.jpg);
+    color: black;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--bgDiv);
+    position: relative;
+    font-size: 26px;
+    transition: all 2s ease-out;
+}
+.light-clock {
+    background-color: rgba(255, 255, 255, .5);
+}
+.number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+.number1 {
+    --rotation: 30deg
+}
+.number2 {
+    --rotation: 60deg
+}
+.number3 {
+    --rotation: 90deg
+}
+.number4 {
+    --rotation: 120deg
+}
+.number5 {
+    --rotation: 150deg
+}
+.number6 {
+    --rotation: 180deg
+}
+.number7 {
+    --rotation: 210deg
+}
+.number8 {
+    --rotation: 240deg
+}
+.number9 {
+    --rotation: 270deg
+}
+.number10 {
+    --rotation: 300deg
+}
+.number11 {
+    --rotation: 330deg
+}
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(var(--rotation));
+}
+.seconds {
+    height: 50%;
+    width: 3px;
+    background-color: rgb(248, 96, 210);
+}
+.minutes {
+    height: 40%;
+    width: 5px;
+    background-color: var(--bgcolor);
+    transition: all 2s ease-out;
+}
+.light-minutes {
+    background-color: black;
+}
+.hours {
+    height: 30%;
+    width: 7px;
+    background-color: var(--bgcolor);
+    transition: all 2s ease-out;
+}
+.light-hours {
+    background-color: black;
+}
+#digitalWatch {
+    position: absolute;
+    top: 70px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+#date {
+    position: absolute;
+    top: 110px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.theme {
+    position: absolute;
+    bottom: 60px;
+}
+.themeButton{
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: var(--bgDiv);
+    border: none;
+    color: var(--colorText);
+    font-size: 16px;
+    transition: all 2s ease-out;
+}
+.light-button {
+    background-color: rgba(255, 255, 255, .5);
+    color: black;
+}
